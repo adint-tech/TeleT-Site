@@ -995,23 +995,62 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 0 2rem; }
+    /* Nav */
+    nav { padding: 0 1.25rem; height: 60px; }
     .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
+    .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; }
+
+    /* Hero */
+    .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-right { display: none; }
-    .hero-left { padding: 9rem 2rem 4rem; }
-    .section-inner { padding: 4rem 2rem; }
-    .about-grid,
-    .contact-grid,
-    .edu-grid { grid-template-columns: 1fr; }
+    .hero-line { display: none; }
+    .hero-left { padding: 7rem 1.5rem 4rem; }
+    .hero-name { font-size: 2.6rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+    /* Sections */
+    .section-inner { padding: 3.5rem 1.5rem; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-aside { position: static; }
+    .profile-block::after { display: none; }
+    .certifications { margin-top: 2rem; padding-top: 2rem; }
+
+    /* Services */
     .services-grid { grid-template-columns: 1fr; }
-    .service-card:nth-child(3n) { border-right: 1px solid var(--mist); }
-    .timeline::before { left: 0; }
-    .timeline-item { grid-template-columns: 1fr; }
-    .timeline-meta { text-align: left; padding-left: 1.5rem; padding-right: 0; }
-    .timeline-item::before { left: -4px; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
-    .affil-item { padding: 0.5rem 1.5rem; }
+    .service-card { border-right: none !important; }
+    .service-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--mist); }
+    .service-card:last-child { border-bottom: none; }
+
+    /* Timeline */
+    .timeline::before { display: none; }
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 2rem 0;
+    }
+    .timeline-item::before { display: none; }
+    .timeline-meta { text-align: left; padding: 0; }
+    .timeline-date { font-size: 0.7rem; }
+
+    /* Education */
+    .edu-grid { grid-template-columns: 1fr; }
+
+    /* Honors */
+    .honors-grid { grid-template-columns: 1fr; }
+
+    /* Affiliations */
+    .affiliations-inner { padding: 0 1.5rem; }
+    .affil-item { padding: 0.5rem 1.25rem; font-size: 0.72rem; }
+
+    /* Contact */
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-right { margin: 0; }
+    .contact-right::after { display: none; }
+
+    /* Footer */
+    footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 2rem 1.5rem; }
   }
 </style>
 </head>
