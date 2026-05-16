@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeleT LLC — Clinical Research & Regulatory Affairs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #162435;
+    --navy-light: #1F3348;
+    --slate: #2E4057;
+    --steel: #4A6274;
+    --silver: #8FA7B5;
+    --mist: #C8D8E0;
+    --fog: #E8EFF3;
+    --white: #F7F9FA;
+    --pure: #FFFFFF;
+    --gold: #B8965C;
+    --gold-light: #D4B07A;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--pure);
+    color: var(--navy);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 4rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(247,249,250,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(13,27,42,0.08);
+    transition: background 0.3s;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--navy);
+    transition: all 0.25s;
+  }
+
+  .nav-cta:hover {
+    background: var(--navy);
+    color: var(--pure);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(135deg, rgba(184,150,92,0.06) 0%, rgba(184,150,92,0) 60%);
+    pointer-events: none;
+  }
+
+  .hero-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(184,150,92,0.2);
+  }
+
+  .hero-left {
+    padding: 10rem 5rem 6rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--pure);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-credentials {
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--silver);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--mist);
+    line-height: 1.8;
+    max-width: 38ch;
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,216,224,0.3);
+    padding-bottom: 2px;
+    transition: all 0.25s;
+  }
+
+  .btn-ghost:hover {
+    color: var(--pure);
+    border-color: var(--pure);
+  }
+
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 4rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stat-item {
+    text-align: right;
+  }
+
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--pure);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-number em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--silver);
+    margin-top: 0.4rem;
+  }
+
+  .stat-divider {
+    width: 2rem;
+    height: 1px;
+    background: rgba(184,150,92,0.3);
+    margin-left: auto;
+    margin-top: 1.5rem;
+  }
+
+  /* ── SECTION STRUCTURE ── */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 4rem;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--steel);
+  }
+
+  /* ── ABOUT ── */
+  .about-section {
+    background: var(--fog);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about-aside {
+    position: sticky;
+    top: 100px;
+  }
+
+  .profile-block {
+    background: var(--navy);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .profile-block::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    left: 8px;
+    top: 8px;
+    border: 1px solid var(--gold);
+    z-index: -1;
+  }
+
+  .profile-name {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--pure);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .profile-cred {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 2rem;
+  }
+
+  .profile-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .profile-items li {
+    font-size: 0.82rem;
+    color: var(--mist);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .profile-items li::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 0.55em;
+    flex-shrink: 0;
+  }
+
+  .contact-links {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(200,216,224,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .contact-links a {
+    font-size: 0.78rem;
+    color: var(--silver);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .contact-links a:hover { color: var(--gold-light); }
+
+  .about-body p {
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: var(--slate);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-body p strong {
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .about-body p:last-child { margin-bottom: 0; }
+
+  .certifications {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--mist);
+  }
+
+  .cert-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 1.2rem;
+  }
+
+  .cert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .cert-tag {
+    font-size: 0.74rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--slate);
+    background: var(--pure);
+    border: 1px solid var(--mist);
+    padding: 0.3rem 0.75rem;
+  }
+
+  /* ── SERVICES ── */
+  .services-section {
+    background: var(--pure);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--mist);
+  }
+
+  .service-card {
+    padding: 2.5rem;
+    border-right: 1px solid var(--mist);
+    border-bottom: 1px solid var(--mist);
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .service-card:hover {
+    background: var(--fog);
+  }
+
+  .service-card:nth-child(3n) {
+    border-right: none;
+  }
+
+  .service-card:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+
+  .service-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--mist);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .service-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .service-desc {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--steel);
+    line-height: 1.75;
+  }
+
+  .service-accent {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+
+  .service-card:hover .service-accent {
+    width: 100%;
+  }
+
+  /* ── EXPERIENCE ── */
+  .experience-section {
+    background: var(--navy);
+  }
+
+  .experience-section .section-title { color: var(--pure); }
+  .experience-section .section-title em { color: var(--gold-light); }
+
+  .timeline {
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12.5rem;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: rgba(184,150,92,0.2);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    position: relative;
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(12.5rem - 4px);
+    top: 3rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--navy);
+  }
+
+  .timeline-meta {
+    padding-top: 0.1rem;
+    text-align: right;
+    padding-right: 2.5rem;
+  }
+
+  .timeline-date {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  .timeline-org {
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--silver);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .timeline-content {}
+
+  .timeline-role {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--pure);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .timeline-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-items li {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--silver);
+    line-height: 1.65;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .timeline-items li::before {
+    content: '—';
+    color: var(--gold);
+    opacity: 0.5;
+    flex-shrink: 0;
+    line-height: 1.65;
+  }
+
+  /* ── EDUCATION ── */
+  .education-section {
+    background: var(--fog);
+  }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--mist);
+  }
+
+  .edu-card {
+    background: var(--pure);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+  }
+
+  .edu-degree {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .edu-school {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .edu-year {
+    font-size: 0.76rem;
+    color: var(--silver);
+    margin-bottom: 1.5rem;
+  }
+
+  .edu-detail {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--steel);
+    line-height: 1.7;
+  }
+
+  /* ── HONORS ── */
+  .honors-section {
+    background: var(--pure);
+  }
+
+  .honors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .honor-card {
+    border: 1px solid var(--fog);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .honor-card:hover {
+    border-color: var(--gold);
+  }
+
+  .honor-year {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--fog);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .honor-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+  }
+
+  .honor-org {
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .honor-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--steel);
+    line-height: 1.65;
+  }
+
+  /* ── AFFILIATIONS ── */
+  .affiliations-section {
+    background: var(--navy);
+    padding: 5rem 0;
+  }
+
+  .affiliations-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  .affiliations-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 3rem;
+  }
+
+  .affil-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .affil-item {
+    padding: 0.75rem 3rem;
+    border-right: 1px solid rgba(184,150,92,0.2);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--silver);
+  }
+
+  .affil-item:last-child { border-right: none; }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--fog);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-left .section-header { margin-bottom: 2rem; }
+
+  .contact-intro {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--slate);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .method-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--silver);
+    min-width: 5rem;
+    padding-top: 0.1rem;
+  }
+
+  .method-value {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--navy);
+  }
+
+  .method-value a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mist);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .method-value a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .contact-right {
+    background: var(--navy);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .contact-right::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    left: 8px;
+    top: 8px;
+    border: 1px solid var(--gold);
+    z-index: -1;
+  }
+
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--silver);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--pure);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: rgba(143,167,181,0.5);
+  }
+
+  .form-field textarea { height: 110px; resize: none; }
+
+  .form-field select option { background: var(--navy); }
+
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-mid);
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(184,150,92,0.15);
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--mist);
+  }
+
+  .footer-brand span { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.74rem;
+    font-weight: 300;
+    color: var(--steel);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+  .fade-up:nth-child(5) { transition-delay: 0.4s; }
+  .fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 2rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 9rem 2rem 4rem; }
+    .section-inner { padding: 4rem 2rem; }
+    .about-grid,
+    .contact-grid,
+    .edu-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card:nth-child(3n) { border-right: 1px solid var(--mist); }
+    .timeline::before { left: 0; }
+    .timeline-item { grid-template-columns: 1fr; }
+    .timeline-meta { text-align: left; padding-left: 1.5rem; padding-right: 0; }
+    .timeline-item::before { left: -4px; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+    .affil-item { padding: 0.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">TeleT<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Work With Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-line"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Clinical Research & Regulatory Affairs</div>
+    <h1 class="hero-name">Tabinda <em>Ali</em></h1>
+    <p class="hero-credentials">MBBS · MS · CCRC</p>
+    <p class="hero-tagline">Founder of TeleT LLC — bringing rigorous clinical research expertise, regulatory strategy, and over a decade of medical science to your trials and submissions.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Our Services</a>
+      <a href="#experience" class="btn-ghost">View Experience</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number"><em>10+</em></div>
+        <div class="stat-label">Years of Clinical Research</div>
+        <div class="stat-divider"></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><em>4.0</em></div>
+        <div class="stat-label">GPA · Master of Clinical Research</div>
+        <div class="stat-divider"></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><em>CCRC</em></div>
+        <div class="stat-label">Certified Clinical Research Coordinator</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-aside">
+        <div class="profile-block fade-up">
+          <p class="profile-name">Tabinda Ali</p>
+          <p class="profile-cred">MBBS · MS · CCRC</p>
+          <ul class="profile-items">
+            <li>Founder — TeleT LLC</li>
+            <li>Portfolio Manager — Michigan Medicine, University of Michigan</li>
+            <li>Medical Writer — StratPhD</li>
+            <li>Northville, Michigan</li>
+          </ul>
+          <div class="contact-links">
+            <a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a>
+            <a href="tel:7343079894">734-307-9894</a>
+            <a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">LinkedIn Profile</a>
+          </div>
+        </div>
+
+        <div class="certifications fade-up">
+          <p class="cert-title">Key Certifications</p>
+          <div class="cert-tags">
+            <span class="cert-tag">CCRC · ACRP 2023</span>
+            <span class="cert-tag">CITI GCP</span>
+            <span class="cert-tag">CITI Human Subjects</span>
+            <span class="cert-tag">FDA Drug Review</span>
+            <span class="cert-tag">FDA Biologics</span>
+            <span class="cert-tag">DataTrak EDC</span>
+            <span class="cert-tag">BLS Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <div class="section-header fade-up">
+          <p class="section-label">About TeleT LLC</p>
+          <h2 class="section-title">Clinical expertise.<br><em>Regulatory precision.</em></h2>
+        </div>
+        <div class="fade-up">
+          <p>TeleT LLC is a clinical research and regulatory affairs consultancy founded by <strong>Tabinda Ali, MBBS, MS, CCRC</strong> — a physician-scientist with dual academic specialization in Clinical Research Management and Regulatory Affairs, and years of hands-on experience at one of the nation's leading academic medical centers.</p>
+          <p>With a medical degree from Baqai Medical University and a Master of Clinical Research (4.0 GPA) from The Ohio State University, Tabinda brings an unusual combination of clinical fluency and regulatory rigor. Her career spans oncology trial management, IRB compliance, quality assurance, data coordination, and regulatory strategy across both academic and ambulatory settings.</p>
+          <p>Currently serving as Portfolio Manager at <strong>Michigan Medicine's Clinical Trial Support Office</strong>, she manages the end-to-end lifecycle of complex multi-sponsor clinical trials — from activation and IRB submission through ongoing compliance, enrollment strategy, and closeout.</p>
+          <p>TeleT LLC was founded to bring that institutional-grade expertise to sponsors, sites, and organizations that need a trusted partner for clinical research operations and regulatory consulting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-title">Services & <em>Capabilities</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-num">01</div>
+        <h3 class="service-title">Regulatory Affairs Consulting</h3>
+        <p class="service-desc">FDA submission strategy, IND applications, regulatory document management, life cycle planning, and compliance with federal guidance for drugs, biologics, and devices.</p>
+        <div class="service-accent"></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Clinical Trial Operations</h3>
+        <p class="service-desc">Site activation, IRB submissions, protocol development, feasibility assessments, enrollment strategy, and full study lifecycle management from start-up through closeout.</p>
+        <div class="service-accent"></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">03</div>
+        <h3 class="service-title">IRB & Compliance</h3>
+        <p class="service-desc">Preparation and submission of electronic IRB applications, protocol amendments, SAE reports, DSMB submissions, renewal documentation, and informed consent development.</p>
+        <div class="service-accent"></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">04</div>
+        <h3 class="service-title">Quality & Auditing</h3>
+        <p class="service-desc">Risk-based monitoring, GCP compliance audits, SOP development, QAPI planning, corrective action plans, and preparation for regulatory surveys and state licensure.</p>
+        <div class="service-accent"></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">05</div>
+        <h3 class="service-title">Data Management</h3>
+        <p class="service-desc">EDC setup and oversight using DataTrak and related systems, data quality assurance, source data management, CRF review, adverse event reporting, and data management plan development.</p>
+        <div class="service-accent"></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-num">06</div>
+        <h3 class="service-title">Medical Writing</h3>
+        <p class="service-desc">Protocol development, informed consent documents, clinical study reports, regulatory briefing documents, and scientific content for research and submission purposes.</p>
+        <div class="service-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-label" style="color: var(--gold);">Career History</p>
+      <h2 class="section-title">Professional <em>Experience</em></h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-meta">
+          <div class="timeline-date">July 2023<br>— Present</div>
+          <div class="timeline-org">Michigan Medicine<br>University of Michigan<br>Ann Arbor, MI</div>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Portfolio Manager — Michigan Clinical Trial Support Office</h3>
+          <ul class="timeline-items">
+            <li>Manage day-to-day clinical trial operations across activation, conduct, and closeout for an institutional portfolio of studies.</li>
+            <li>Serve as primary point of contact for incoming studies; process intake forms and coordinate with sponsors to obtain activation documents.</li>
+            <li>Monitor start-up timelines, IRB approvals, budget development, and contract execution; facilitate feasibility review for new trials.</li>
+            <li>Lead study planning meetings and serve as expert resource to PIs, coordinators, and research staff on protocol requirements and problem-solving.</li>
+            <li>Oversee enrollment tracking in OnCore; implement subject recruitment strategies and identify and resolve barriers to enrollment.</li>
+            <li>Maintain SOPs in concert with Medical Director and Associate Director of Operations; act as CTMS super user for research purposes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-meta">
+          <div class="timeline-date">May 2025<br>— Dec 2025</div>
+          <div class="timeline-org">Michigan Medicine<br>University of Michigan<br>Ann Arbor, MI</div>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Interim Scleroderma Program Lead</h3>
+          <ul class="timeline-items">
+            <li>Provided administrative supervision for a team of 8 employees; managed HR activities including conflict resolution and performance tracking.</li>
+            <li>Developed processes, tools, and training programs to ensure accurate site-level data collection and regulatory compliance.</li>
+            <li>Conducted internal audits and revised SOPs in accordance with FDA regulations and Good Clinical Practices.</li>
+            <li>Recruited and trained clinical research personnel; supported both pre-award and post-award staff activities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-meta">
+          <div class="timeline-date">March 2022<br>— July 2023</div>
+          <div class="timeline-org">Michigan Medicine<br>University of Michigan<br>Ann Arbor, MI</div>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Clinical Research Coordinator — Oncology</h3>
+          <ul class="timeline-items">
+            <li>Maintained regulatory records for multiple assigned oncology clinical trials; wrote and revised informed consent documents.</li>
+            <li>Submitted IRB protocol amendments, SAE reports, DSMB reports, scheduled continuation renewals, and study termination reports.</li>
+            <li>Managed regulatory binders, 1572 updates, financial disclosures, lab normals, and IRBMED rosters for assigned studies.</li>
+            <li>Recognized with Rookie of the Year award (December 2022) for quality of contributions within first year.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-meta">
+          <div class="timeline-date">Aug 2020<br>— Oct 2021</div>
+          <div class="timeline-org">American Surgical Center<br>West Bloomfield, MI</div>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Quality Compliance Manager & Regulatory Specialist</h3>
+          <ul class="timeline-items">
+            <li>Revised policies and procedures to align with AAAHC, CMS, and OSHA guidance; developed QAPI and Risk Analysis plans.</li>
+            <li>Conducted quality studies and safety monitoring across all areas of patient care; prepared the center for state licensure.</li>
+            <li>Successfully passed all corrective action plans and AAAHC survey review, achieving 100% compliance and full state licensure.</li>
+            <li>Developed credentialing documentation for physicians and insurance companies across multiple specialties.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-meta">
+          <div class="timeline-date">Aug 2019<br>— May 2022</div>
+          <div class="timeline-org">Ohio State University<br>Colleges of Pharmacy & Nursing<br>Columbus, OH</div>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-role">Lecturer & Adjunct Instructor</h3>
+          <ul class="timeline-items">
+            <li>PHR 5402 / Nursing 7402: Economic Evaluation of Healthcare Interventions — taught pharmacoeconomic methods using TreeAge software.</li>
+            <li>PHR 5005: Fundamentals of Pathophysiology — assisted with grading, created rubrics aligned with revised course model.</li>
+            <li>Modeled professionalism and teamwork; mentored graduate students through complex course material.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education-section" id="education">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">Education & <em>Training</em></h2>
+    </div>
+    <div class="edu-grid fade-up">
+      <div class="edu-card">
+        <p class="edu-school">Ohio State University · Columbus, OH</p>
+        <h3 class="edu-degree">Master of Clinical Research</h3>
+        <p class="edu-year">May 2021 · 4.0 GPA · Outstanding Academic Achievement Award</p>
+        <p class="edu-detail">Dual specialization in Clinical Research Management and Regulatory Affairs. Received the MCR Outstanding Academic Achievement Award among 52 candidates. Member of Golden Key International Honor Society and Phi Kappa Phi Honor Society (top 15% of academic program).</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-school">Baqai Medical University · Karachi, Pakistan</p>
+        <h3 class="edu-degree">MBBS — Bachelor of Medicine & Surgery</h3>
+        <p class="edu-year">2011 · Equivalent to MD · Merit-Based Scholarship Recipient</p>
+        <p class="edu-detail">Completed full medical degree with clinical rotations in internal medicine, surgery, pediatrics, OB/GYN, ENT, psychiatry, neurology, dermatology, and ophthalmology. Awarded merit-based scholarship for maintaining above 90% academic performance and above 80% attendance throughout the program.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONORS -->
+<section class="honors-section">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-label">Recognition</p>
+      <h2 class="section-title">Honors & <em>Awards</em></h2>
+    </div>
+    <div class="honors-grid">
+      <div class="honor-card fade-up">
+        <div class="honor-year">2022</div>
+        <h3 class="honor-title">Rookie of the Year</h3>
+        <p class="honor-org">University of Michigan</p>
+        <p class="honor-desc">Awarded to recognize exceptional quality of work by employees in their first year with the Office of Research.</p>
+      </div>
+      <div class="honor-card fade-up">
+        <div class="honor-year">2021</div>
+        <h3 class="honor-title">MCR Outstanding Academic Achievement Award</h3>
+        <p class="honor-org">Ohio State University</p>
+        <p class="honor-desc">Awarded for academic excellence and leadership skills among 52 candidates in the Master of Clinical Research program.</p>
+      </div>
+      <div class="honor-card fade-up">
+        <div class="honor-year">2019</div>
+        <h3 class="honor-title">Golden Key International Honor Society</h3>
+        <p class="honor-org">Ohio State University</p>
+        <p class="honor-desc">Invitation-only membership for the top 15% of academic performers across all graduate programs.</p>
+      </div>
+      <div class="honor-card fade-up">
+        <div class="honor-year">2019</div>
+        <h3 class="honor-title">Phi Kappa Phi Honor Society</h3>
+        <p class="honor-org">Ohio State University</p>
+        <p class="honor-desc">The nation's oldest and most selective all-discipline honor society, recognizing academic excellence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFFILIATIONS -->
+<section class="affiliations-section">
+  <div class="affiliations-inner">
+    <p class="affiliations-label">Professional Associations</p>
+    <div class="affil-row">
+      <span class="affil-item">SOCRA</span>
+      <span class="affil-item">ACRP</span>
+      <span class="affil-item">ASCA</span>
+      <span class="affil-item">MASA</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-header fade-up">
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Let's work <em>together</em></h2>
+        </div>
+        <p class="contact-intro fade-up">Whether you need a regulatory affairs consultant, clinical trial support, or a medical writing partner — TeleT LLC brings physician-scientist expertise to your project.</p>
+        <div class="contact-methods fade-up">
+          <div class="contact-method">
+            <span class="method-label">Email</span>
+            <span class="method-value"><a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a></span>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">Phone</span>
+            <span class="method-value"><a href="tel:7343079894">734-307-9894</a></span>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">Location</span>
+            <span class="method-value">Northville, Michigan</span>
+          </div>
+          <div class="contact-method">
+            <span class="method-label">LinkedIn</span>
+            <span class="method-value"><a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">tabinda-ali87110412</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right fade-up">
+        <div class="form-field">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name">
+        </div>
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label>Inquiry Type</label>
+          <select>
+            <option value="">Select a service area</option>
+            <option>Regulatory Affairs Consulting</option>
+            <option>Clinical Trial Operations</option>
+            <option>IRB & Compliance</option>
+            <option>Quality Assurance & Auditing</option>
+            <option>Data Management</option>
+            <option>Medical Writing</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea placeholder="Briefly describe your project or question..."></textarea>
+        </div>
+        <button class="form-submit">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">TeleT<span> LLC</span></span>
+  <span class="footer-copy">© 2025 TeleT LLC · Clinical Research & Regulatory Affairs · Northville, Michigan</span>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+document.querySelector('.form-submit').addEventListener('click', function() {
+  const name = document.querySelector('input[type=text]').value;
+  const email = document.querySelector('input[type=email]').value;
+  if (!name || !email) {
+    this.textContent = 'Please fill in name & email';
+    setTimeout(() => this.textContent = 'Send Message', 2000);
+    return;
+  }
+  this.textContent = 'Message Sent ✓';
+  this.style.background = '#4A6274';
+  this.style.cursor = 'default';
+});
+</script>
+
+</body>
+</html>
