@@ -38,7 +38,7 @@
     border-bottom: 1px solid rgba(13,27,42,0.08);
   }
   .nav-logo { display: flex; align-items: center; text-decoration: none; }
-  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo img { height: 44px; width: auto; display: block; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold); }
@@ -180,7 +180,8 @@
 
   /* ── FOOTER ── */
   footer { background: var(--navy-mid); padding: 2.5rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(184,150,92,0.15); }
-  .footer-logo img { height: 28px; width: auto; opacity: 0.8; }
+  .footer-logo { display: inline-flex; align-items: center; background: var(--fog); padding: 0.5rem 1rem; }
+  .footer-logo img { height: 26px; width: auto; display: block; }
   .footer-copy { font-size: 0.74rem; font-weight: 300; color: var(--steel); letter-spacing: 0.05em; }
 
   /* ── ANIMATIONS ── */
@@ -229,7 +230,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="telet-logo.png" alt="TeleT LLC">
+    <img src="telet-logo-transparent.png" alt="TeleT LLC">
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -286,11 +287,9 @@
             <li>Founder — TeleT LLC</li>
             <li>Portfolio Manager — Michigan Medicine, University of Michigan</li>
             <li>Medical Writer — StratPhD</li>
-            <li>Northville, Michigan</li>
           </ul>
           <div class="contact-links">
             <a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a>
-            <a href="tel:7343079894">734-307-9894</a>
             <a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">linkedin.com/in/tabinda-ali87110412</a>
           </div>
         </div>
@@ -303,7 +302,7 @@
         </div>
         <div class="fade-up">
           <p>TeleT LLC is a clinical research and regulatory affairs consultancy founded by <strong>Tabinda Ali, MBBS, MS, CCRC</strong> — a physician-scientist with dual academic specialization in Clinical Research Management and Regulatory Affairs, and years of hands-on experience at one of the nation's leading academic medical centers.</p>
-          <p>With a medical degree from Baqai Medical University and a Master of Clinical Research (4.0 GPA) from The Ohio State University, Tabinda brings an unusual combination of clinical fluency and regulatory rigor. Her career spans oncology trial management, IRB compliance, quality assurance, data coordination, and regulatory strategy across both academic and ambulatory settings.</p>
+          <p>With a medical degree from Baqai Medical University and a Master of Clinical Research (4.0 GPA) from The Ohio State University, Tabinda brings an unusual combination of clinical fluency and regulatory rigor. Her career spans clinical trial management, IRB compliance, quality assurance, data coordination, and regulatory strategy across both academic and ambulatory settings.</p>
           <p>TeleT LLC provides institutional-grade expertise to sponsors, sites, and organizations that need a trusted partner for clinical research operations and regulatory consulting.</p>
         </div>
       </div>
@@ -378,7 +377,7 @@
         <div class="trust-accent"></div>
         <div class="trust-icon">🏛</div>
         <h3 class="trust-title">Institutional-Grade Experience</h3>
-        <p class="trust-desc">Years at Michigan Medicine's Clinical Trial Support Office managing multi-sponsor oncology trials, regulatory submissions, IRB compliance, and study lifecycle from activation through closeout.</p>
+        <p class="trust-desc">Years at Michigan Medicine's Clinical Trial Support Office managing multi-sponsor clinical trials, regulatory submissions, IRB compliance, and study lifecycle from activation through closeout.</p>
       </div>
       <div class="trust-card">
         <div class="trust-accent"></div>
@@ -485,14 +484,6 @@
             <span class="method-value"><a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a></span>
           </div>
           <div class="contact-method">
-            <span class="method-label">Phone</span>
-            <span class="method-value"><a href="tel:7343079894">734-307-9894</a></span>
-          </div>
-          <div class="contact-method">
-            <span class="method-label">Location</span>
-            <span class="method-value">Northville, Michigan</span>
-          </div>
-          <div class="contact-method">
             <span class="method-label">LinkedIn</span>
             <span class="method-value"><a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">tabinda-ali87110412</a></span>
           </div>
@@ -533,7 +524,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="footer-logo"><img src="telet-logo.png" alt="TeleT LLC"></a>
+  <a href="#" class="footer-logo"><img src="telet-logo-transparent.png" alt="TeleT LLC"></a>
   <span class="footer-copy">© 2025 TeleT LLC · Clinical Research & Regulatory Affairs · Northville, Michigan</span>
 </footer>
 
