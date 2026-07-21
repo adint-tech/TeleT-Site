@@ -127,33 +127,6 @@
   .trust-accent { position: absolute; top: 0; left: 0; width: 2px; height: 0; background: var(--gold); transition: height 0.5s ease; }
   .trust-card:hover .trust-accent { height: 100%; }
 
-  .affil-strip { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid rgba(184,150,92,0.15); }
-  .affil-strip-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-  .affil-strip-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
-  .affil-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-  .affil-pill { font-size: 0.74rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--silver); border: 1px solid rgba(184,150,92,0.25); padding: 0.4rem 1rem; }
-
-  /* ── RESUME CTA ── */
-  .resume-section { background: var(--fog); }
-  .resume-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 4rem; }
-  .resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-  .resume-left {}
-  .resume-left .section-header { margin-bottom: 1.5rem; }
-  .resume-desc { font-size: 1rem; font-weight: 300; color: var(--slate); line-height: 1.85; margin-bottom: 2.5rem; }
-  .resume-credentials { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
-  .resume-cred-tag { font-size: 0.74rem; font-weight: 400; letter-spacing: 0.06em; color: var(--slate); background: var(--pure); border: 1px solid var(--mist); padding: 0.3rem 0.75rem; }
-  .btn-resume { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.9rem 2rem; background: var(--navy); color: var(--pure); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
-  .btn-resume:hover { background: var(--slate); transform: translateY(-1px); }
-  .btn-resume svg { width: 14px; height: 14px; fill: currentColor; }
-
-  .resume-right { background: var(--navy); padding: 3rem; position: relative; }
-  .resume-right::after { content: ''; position: absolute; bottom: -8px; right: -8px; left: 8px; top: 8px; border: 1px solid var(--gold); z-index: -1; }
-  .resume-highlights { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
-  .resume-highlights li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; }
-  .rh-year { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; padding-top: 0.15rem; }
-  .rh-text { font-size: 0.88rem; font-weight: 300; color: var(--mist); line-height: 1.6; }
-  .rh-text strong { font-weight: 500; color: var(--pure); }
-  .rh-divider { grid-column: 1/-1; height: 1px; background: rgba(255,255,255,0.05); }
 
   /* ── CONTACT ── */
   .contact-section { background: var(--pure); }
@@ -216,9 +189,6 @@
     .trust-grid { grid-template-columns: 1fr; }
     .trust-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .trust-card:last-child { border-bottom: none; }
-    .resume-inner { padding: 3.5rem 1.5rem; }
-    .resume-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .resume-right::after { display: none; }
     .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .contact-right::after { display: none; }
     footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 2rem 1.5rem; }
@@ -236,7 +206,6 @@
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#resume">Background</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Work With Us</a>
@@ -252,7 +221,7 @@
     <p class="hero-tagline">Founder of TeleT LLC — bringing rigorous clinical research expertise, regulatory strategy, and over a decade of medical science to your trials and submissions.</p>
     <div class="hero-actions">
       <a href="#services" class="btn-primary">Our Services</a>
-      <a href="#resume" class="btn-ghost">View Background</a>
+      <a href="#about" class="btn-ghost">About TeleT</a>
     </div>
   </div>
   <div class="hero-right">
@@ -382,87 +351,8 @@
       <div class="trust-card">
         <div class="trust-accent"></div>
         <div class="trust-icon">✦</div>
-        <h3 class="trust-title">Recognized Excellence</h3>
-        <p class="trust-desc">University of Michigan Rookie of the Year (2022). MCR Outstanding Academic Achievement Award among 52 candidates (2021). Golden Key International Honor Society. Phi Kappa Phi.</p>
-      </div>
-    </div>
-
-    <div class="affil-strip fade-up">
-      <p class="affil-strip-label">Professional Associations</p>
-      <div class="affil-pills">
-        <span class="affil-pill">SOCRA</span>
-        <span class="affil-pill">ACRP</span>
-        <span class="affil-pill">ASCA</span>
-        <span class="affil-pill">MASA</span>
-        <span class="affil-pill">CCRC · ACRP 2023</span>
-        <span class="affil-pill">CITI GCP</span>
-        <span class="affil-pill">FDA Drug Review</span>
-        <span class="affil-pill">FDA Biologics</span>
-        <span class="affil-pill">DataTrak EDC</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME / BACKGROUND -->
-<section class="resume-section" id="resume">
-  <div class="resume-inner">
-    <div class="resume-grid">
-      <div class="resume-left">
-        <div class="section-header fade-up">
-          <p class="section-label">Background</p>
-          <h2 class="section-title">Education &<br><em>Experience</em></h2>
-        </div>
-        <p class="resume-desc fade-up">Tabinda's credentials span two continents and two disciplines — medical training in Pakistan and graduate research education in the United States, grounded by years of direct clinical trial experience at a top-10 academic medical center.</p>
-        <div class="resume-credentials fade-up">
-          <span class="resume-cred-tag">MBBS · Baqai Medical University</span>
-          <span class="resume-cred-tag">MS Clinical Research · Ohio State · 4.0 GPA</span>
-          <span class="resume-cred-tag">CCRC · ACRP Certified</span>
-          <span class="resume-cred-tag">Michigan Medicine · Portfolio Manager</span>
-          <span class="resume-cred-tag">Interim Program Lead · Scleroderma</span>
-          <span class="resume-cred-tag">Oncology CRC · Michigan Medicine</span>
-          <span class="resume-cred-tag">Quality Compliance Manager · ASC</span>
-          <span class="resume-cred-tag">Lecturer · Ohio State · College of Pharmacy</span>
-          <span class="resume-cred-tag">Medical Writer · StratPhD</span>
-        </div>
-        <a href="ALI__T_CV.docx" download class="btn-resume fade-up">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 16l-4-4h2.5V4h3v8H16l-4 4zm-7 2h14v2H5v-2z"/></svg>
-          Download Full CV
-        </a>
-      </div>
-
-      <div class="resume-right fade-up">
-        <ul class="resume-highlights">
-          <li>
-            <span class="rh-year">2023–</span>
-            <span class="rh-text"><strong>Portfolio Manager</strong> — Michigan Medicine Clinical Trial Support Office, University of Michigan</span>
-          </li>
-          <li class="rh-divider"></li>
-          <li>
-            <span class="rh-year">2025</span>
-            <span class="rh-text"><strong>Interim Scleroderma Program Lead</strong> — Michigan Medicine · supervised team of 8, led audits & SOP revision</span>
-          </li>
-          <li class="rh-divider"></li>
-          <li>
-            <span class="rh-year">2022</span>
-            <span class="rh-text"><strong>Clinical Research Coordinator, Oncology</strong> — Michigan Medicine · Rookie of the Year Award</span>
-          </li>
-          <li class="rh-divider"></li>
-          <li>
-            <span class="rh-year">2020</span>
-            <span class="rh-text"><strong>Quality Compliance Manager</strong> — American Surgical Center · achieved 100% AAAHC compliance & full state licensure</span>
-          </li>
-          <li class="rh-divider"></li>
-          <li>
-            <span class="rh-year">2021</span>
-            <span class="rh-text"><strong>MCR · Ohio State University</strong> — 4.0 GPA · Outstanding Academic Achievement Award · dual specialization Regulatory Affairs & Clinical Research Management</span>
-          </li>
-          <li class="rh-divider"></li>
-          <li>
-            <span class="rh-year">2011</span>
-            <span class="rh-text"><strong>MBBS · Baqai Medical University</strong> — Merit scholarship · equivalent to MD</span>
-          </li>
-        </ul>
+        <h3 class="trust-title">Founder-Led, Every Time</h3>
+        <p class="trust-desc">Every engagement is handled personally by Tabinda — direct communication, full accountability, and the discretion and rigor your regulatory and clinical work demands.</p>
       </div>
     </div>
   </div>
