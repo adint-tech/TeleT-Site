@@ -2,440 +2,1438 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TeleT LLC — Clinical Research & Regulatory Affairs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B2450">
+
+<title>TeleT LLC — Clinical Research & Regulatory Affairs Consulting</title>
+<meta name="description" content="TeleT LLC is a clinical research and regulatory affairs consultancy founded by Tabinda Ali, MBBS, MS, CCRC — offering FDA submission strategy, clinical trial operations, IRB compliance, quality auditing, data management, and medical writing.">
+<meta name="author" content="Tabinda Ali, MBBS, MS, CCRC">
+<meta name="robots" content="index, follow">
+
+<!-- Replace https://teletllc.com/ with the live domain before launch (canonical + Open Graph require absolute URLs). -->
+<link rel="canonical" href="https://teletllc.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TeleT LLC">
+<meta property="og:url" content="https://teletllc.com/">
+<meta property="og:title" content="TeleT LLC — Clinical Research & Regulatory Affairs Consulting">
+<meta property="og:description" content="Physician-scientist-led clinical research and regulatory affairs consulting. Founded by Tabinda Ali, MBBS, MS, CCRC.">
+<meta property="og:image" content="https://teletllc.com/assets/telet-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TeleT LLC — Clinical Research & Regulatory Affairs Consulting">
+<meta name="twitter:description" content="Physician-scientist-led clinical research and regulatory affairs consulting. Founded by Tabinda Ali, MBBS, MS, CCRC.">
+<meta name="twitter:image" content="https://teletllc.com/assets/telet-logo.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/telet-mark.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/telet-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TeleT LLC",
+  "description": "Clinical research and regulatory affairs consultancy providing FDA submission strategy, clinical trial operations, IRB compliance, quality auditing, data management, and medical writing.",
+  "url": "https://teletllc.com/",
+  "logo": "https://teletllc.com/assets/telet-logo.png",
+  "image": "https://teletllc.com/assets/telet-logo.png",
+  "email": "alitabinda2026@gmail.com",
+  "areaServed": "US",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Northville",
+    "addressRegion": "MI",
+    "addressCountry": "US"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Tabinda Ali",
+    "honorificSuffix": "MBBS, MS, CCRC",
+    "jobTitle": "Founder & Principal Consultant",
+    "email": "alitabinda2026@gmail.com",
+    "sameAs": "https://www.linkedin.com/in/tabinda-ali87110412",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Baqai Medical University" },
+      { "@type": "CollegeOrUniversity", "name": "The Ohio State University" }
+    ]
+  },
+  "knowsAbout": [
+    "Regulatory Affairs",
+    "Clinical Trial Management",
+    "IRB Compliance",
+    "Good Clinical Practice",
+    "Clinical Data Management",
+    "Medical Writing"
+  ]
+}
+</script>
+
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ══════════════════════════════════════════════════════════════
+   TeleT LLC — design tokens
+   Palette is sampled directly from the brand mark:
+   navy #0B2450 (wordmark) · blue #2A6FB5 · teal #109C9C (icon)
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  /* Brand */
+  --ink-900:  #04101F;
+  --ink-800:  #071A31;
+  --ink-700:  #0B2450;
+  --ink-600:  #13315C;
+  --ink-500:  #1D4270;
 
-  :root {
-    --navy: #0D1B2A;
-    --navy-mid: #162435;
-    --navy-light: #1F3348;
-    --slate: #2E4057;
-    --steel: #4A6274;
-    --silver: #8FA7B5;
-    --mist: #C8D8E0;
-    --fog: #E8EFF3;
-    --white: #F7F9FA;
-    --pure: #FFFFFF;
-    --gold: #B8965C;
-    --gold-light: #D4B07A;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
+  --blue-600: #2A6FB5;
+  --blue-400: #6BA3D8;
+
+  --teal-800: #096969;
+  --teal-700: #0B7A7A;
+  --teal-600: #109C9C;
+  --teal-400: #3FBDBD;
+  --teal-200: #A5E3E3;
+
+  /* Neutrals */
+  --slate-800: #1B2C3E;
+  --slate-600: #3E566B;
+  --slate-500: #5B7186;
+  --slate-400: #8298AA;
+  --slate-300: #A9BCCA;
+  --line:      #DDE6EC;
+  --line-soft: #EAF0F4;
+  --paper-100: #EFF4F7;
+  --paper-50:  #F7FAFB;
+  --paper:     #FFFFFF;
+
+  /* Type */
+  --serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* Rhythm */
+  --gutter:  clamp(1.25rem, 5vw, 4rem);
+  --section: clamp(4.5rem, 9vw, 8rem);
+  --maxw:    1240px;
+  --header-h: 84px;
+
+  --shadow-sm: 0 1px 2px rgba(11,36,80,.05), 0 2px 8px rgba(11,36,80,.04);
+  --shadow-md: 0 2px 4px rgba(11,36,80,.04), 0 12px 32px rgba(11,36,80,.08);
+  --shadow-lg: 0 4px 8px rgba(11,36,80,.05), 0 24px 56px rgba(11,36,80,.12);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--slate-600);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+
+::selection { background: var(--teal-200); color: var(--ink-700); }
+
+:focus-visible {
+  outline: 2px solid var(--teal-600);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.on-dark :focus-visible { outline-color: var(--teal-400); }
+
+.skip-link {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -120%);
+  z-index: 300; background: var(--ink-700); color: #fff;
+  padding: .75rem 1.5rem; font-size: .875rem; font-weight: 500;
+  text-decoration: none; border-radius: 0 0 6px 6px;
+  transition: transform .2s var(--ease);
+}
+.skip-link:focus { transform: translate(-50%, 0); }
+
+/* ── Shared primitives ─────────────────────────────────────── */
+.wrap { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section); position: relative; }
+
+.eyebrow {
+  display: flex; align-items: center; gap: .875rem;
+  font-size: .7rem; font-weight: 600; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--teal-700);
+  margin-bottom: 1.25rem;
+}
+.eyebrow::before {
+  content: ''; flex: none; width: 1.75rem; height: 1px;
+  background: currentColor; opacity: .55;
+}
+.on-dark .eyebrow { color: var(--teal-400); }
+
+.h-display {
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4vw, 3.15rem);
+  font-weight: 400; line-height: 1.14;
+  letter-spacing: -.021em; color: var(--ink-700);
+  text-wrap: balance;
+}
+.h-display em { font-style: italic; font-weight: 300; color: var(--teal-700); }
+.on-dark .h-display { color: #fff; }
+.on-dark .h-display em { color: var(--teal-400); }
+
+.lede {
+  font-size: clamp(1.02rem, 1.35vw, 1.12rem);
+  font-weight: 300; line-height: 1.8;
+  color: var(--slate-500); max-width: 62ch;
+  margin-top: 1.5rem;
+}
+.on-dark .lede { color: var(--slate-300); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  font-family: var(--sans); font-size: .82rem; font-weight: 500;
+  letter-spacing: .05em; text-decoration: none; cursor: pointer;
+  padding: .95rem 1.75rem; border-radius: 3px; border: 1px solid transparent;
+  transition: background .22s var(--ease), color .22s var(--ease),
+              border-color .22s var(--ease), transform .22s var(--ease),
+              box-shadow .22s var(--ease);
+  white-space: nowrap;
+}
+.btn svg { width: 15px; height: 15px; flex: none; transition: transform .22s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+
+.btn-solid { background: var(--teal-700); color: #fff; box-shadow: 0 1px 2px rgba(11,36,80,.1); }
+.btn-solid:hover { background: var(--teal-800); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(11,122,122,.3); }
+
+.btn-line { border-color: var(--line); color: var(--ink-700); background: transparent; }
+.btn-line:hover { border-color: var(--ink-700); background: var(--ink-700); color: #fff; }
+
+.on-dark .btn-line { border-color: rgba(255,255,255,.28); color: #fff; }
+.on-dark .btn-line:hover { background: #fff; border-color: #fff; color: var(--ink-700); }
+
+/* ══ HEADER ═══════════════════════════════════════════════════ */
+.site-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 100;
+  height: var(--header-h);
+  background: rgba(255,255,255,.86);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: height .3s var(--ease), background .3s var(--ease),
+              border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.site-header.is-stuck {
+  height: 68px;
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 20px rgba(11,36,80,.06);
+}
+.header-inner {
+  max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter);
+  height: 100%; display: flex; align-items: center; gap: 2rem;
+}
+
+.brand { display: flex; align-items: center; margin-right: auto; text-decoration: none; }
+.brand img {
+  height: 56px; width: auto;
+  transition: height .3s var(--ease);
+}
+.site-header.is-stuck .brand img { height: 44px; }
+
+.nav { display: flex; align-items: center; gap: 2.25rem; }
+.nav a {
+  position: relative; font-size: .82rem; font-weight: 500;
+  letter-spacing: .01em; color: var(--slate-600); text-decoration: none;
+  padding-block: .35rem; transition: color .2s var(--ease);
+}
+.nav a::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
+  height: 1.5px; background: var(--teal-600);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .28s var(--ease);
+}
+.nav a:hover { color: var(--ink-700); }
+.nav a:hover::after, .nav a[aria-current="true"]::after { transform: scaleX(1); }
+.nav a[aria-current="true"] { color: var(--ink-700); }
+
+.header-cta { padding: .7rem 1.4rem; }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none; width: 42px; height: 42px; margin-right: -8px;
+  background: none; border: 0; cursor: pointer; color: var(--ink-700);
+  align-items: center; justify-content: center;
+}
+.menu-toggle span {
+  display: block; position: relative; width: 22px; height: 1.5px;
+  background: currentColor; border-radius: 2px;
+  transition: background .2s var(--ease);
+}
+.menu-toggle span::before, .menu-toggle span::after {
+  content: ''; position: absolute; left: 0; width: 22px; height: 1.5px;
+  background: currentColor; border-radius: 2px;
+  transition: transform .28s var(--ease), top .2s var(--ease);
+}
+.menu-toggle span::before { top: -7px; }
+.menu-toggle span::after  { top: 7px; }
+.menu-toggle[aria-expanded="true"] span { background: transparent; }
+.menu-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span::after  { top: 0; transform: rotate(-45deg); }
+
+.mobile-nav {
+  position: fixed; inset: var(--header-h) 0 0 0; z-index: 99;
+  background: var(--paper); padding: 1.5rem var(--gutter) 3rem;
+  display: flex; flex-direction: column; gap: .25rem;
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity .28s var(--ease), transform .28s var(--ease), visibility .28s;
+  overflow-y: auto;
+}
+.mobile-nav.is-open { opacity: 1; visibility: visible; transform: none; }
+.mobile-nav a:not(.btn) {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+  color: var(--ink-700); text-decoration: none;
+  padding: .85rem 0; border-bottom: 1px solid var(--line-soft);
+  transition: color .2s var(--ease);
+}
+.mobile-nav a:not(.btn):hover { color: var(--teal-700); }
+.mobile-nav .btn { margin-top: 2rem; align-self: stretch; }
+body.menu-open { overflow: hidden; }
+
+/* ══ HERO ═════════════════════════════════════════════════════ */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--ink-800);
+  padding-top: calc(var(--header-h) + clamp(3rem, 7vw, 6rem));
+  padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  isolation: isolate;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: -2;
+  background:
+    radial-gradient(90ch 60ch at 82% 8%,  rgba(16,156,156,.20), transparent 62%),
+    radial-gradient(80ch 55ch at 8% 92%,  rgba(42,111,181,.22), transparent 60%),
+    linear-gradient(168deg, var(--ink-700) 0%, var(--ink-800) 52%, var(--ink-900) 100%);
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 88px 88px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent);
+          mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent);
+}
+.hero-grid {
+  display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.85fr);
+  gap: clamp(2.5rem, 5vw, 5rem); align-items: center;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.9rem, 6.2vw, 4.6rem);
+  font-weight: 300; line-height: 1.05; letter-spacing: -.028em;
+  color: #fff; margin-bottom: .85rem;
+}
+.hero h1 em { font-style: italic; color: var(--teal-400); }
+.hero-cred {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .55rem .8rem;
+  font-size: .76rem; font-weight: 500; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--slate-300);
+  margin-bottom: 1.9rem;
+}
+.hero-cred span { position: relative; }
+.hero-cred span + span::before {
+  content: ''; position: absolute; left: -.55rem; top: 50%;
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--teal-600); transform: translateY(-50%);
+}
+.hero-tagline {
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem); font-weight: 300;
+  line-height: 1.82; color: var(--slate-300);
+  max-width: 44ch; margin-bottom: 2.75rem;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* Credentials panel */
+.dossier {
+  position: relative;
+  background: linear-gradient(155deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 6px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: 0 32px 72px rgba(0,0,0,.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.dossier::before {
+  content: ''; position: absolute; top: -1px; left: 12%; right: 12%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal-400), transparent);
+}
+.dossier-logo {
+  width: 100%; max-width: 320px; height: auto; margin: 0 auto;
+}
+.dossier-rule {
+  height: 1px; background: rgba(255,255,255,.12);
+  margin: clamp(1.5rem, 3vw, 2.1rem) 0 clamp(1.25rem, 2.5vw, 1.75rem);
+}
+.dossier-list { list-style: none; display: grid; gap: 1.35rem; }
+.dossier-list li { display: grid; gap: .3rem; }
+.dossier-k {
+  font-size: .66rem; font-weight: 600; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--teal-400);
+}
+.dossier-v {
+  font-family: var(--serif); font-size: 1.08rem; font-weight: 400;
+  line-height: 1.4; color: #fff;
+}
+.dossier-v small {
+  display: block; font-family: var(--sans); font-size: .8rem;
+  font-weight: 300; color: var(--slate-400); margin-top: .15rem;
+  letter-spacing: .01em;
+}
+
+/* ══ CREDENTIAL BAR ═══════════════════════════════════════════ */
+.credbar { background: var(--ink-900); border-top: 1px solid rgba(255,255,255,.07); }
+.credbar-inner {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem 2.5rem;
+  padding-block: 1.6rem;
+}
+.credbar-label {
+  font-size: .66rem; font-weight: 600; letter-spacing: .17em;
+  text-transform: uppercase; color: var(--slate-400);
+}
+.credbar-items {
+  display: flex; flex-wrap: wrap; gap: .75rem 2.25rem; list-style: none;
+}
+.credbar-items li {
+  font-size: .84rem; font-weight: 400; letter-spacing: .015em;
+  color: var(--slate-300);
+}
+
+/* ══ ABOUT ════════════════════════════════════════════════════ */
+.about { background: var(--paper-50); border-bottom: 1px solid var(--line); }
+.about-grid {
+  display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr);
+  gap: clamp(2.5rem, 6vw, 5.5rem); align-items: start;
+}
+.about-aside { position: sticky; top: calc(var(--header-h) + 2rem); }
+
+.profile-card {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-md);
+}
+.profile-head {
+  background: linear-gradient(150deg, var(--ink-700), var(--ink-800));
+  padding: 2rem 1.9rem 1.75rem; position: relative;
+}
+.profile-head::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, var(--teal-600), var(--blue-600));
+}
+.profile-name {
+  font-family: var(--serif); font-size: 1.6rem; font-weight: 400;
+  color: #fff; line-height: 1.2;
+}
+.profile-suffix {
+  font-size: .72rem; font-weight: 500; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--teal-400); margin-top: .45rem;
+}
+.profile-body { padding: 1.75rem 1.9rem 1.9rem; }
+.profile-h {
+  font-size: .66rem; font-weight: 600; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--slate-500); margin-bottom: .9rem;
+}
+.profile-roles { list-style: none; display: grid; gap: .95rem; }
+.profile-roles li { display: flex; gap: .7rem; align-items: flex-start; }
+.profile-roles svg { width: 15px; height: 15px; flex: none; margin-top: .35rem; color: var(--teal-600); }
+.profile-roles strong {
+  display: block; font-size: .89rem; font-weight: 500;
+  color: var(--ink-700); line-height: 1.45;
+}
+.profile-roles span { font-size: .8rem; font-weight: 300; color: var(--slate-500); }
+
+.profile-contact {
+  margin-top: 1.6rem; padding-top: 1.5rem; border-top: 1px solid var(--line-soft);
+  display: grid; gap: .7rem;
+}
+.profile-contact a {
+  display: flex; align-items: center; gap: .65rem;
+  font-size: .84rem; color: var(--slate-600); text-decoration: none;
+  transition: color .2s var(--ease); word-break: break-word;
+}
+.profile-contact svg { width: 15px; height: 15px; flex: none; color: var(--slate-400); transition: color .2s var(--ease); }
+.profile-contact a:hover { color: var(--teal-700); }
+.profile-contact a:hover svg { color: var(--teal-600); }
+
+.prose p {
+  font-size: clamp(1rem, 1.3vw, 1.06rem); font-weight: 300;
+  line-height: 1.87; color: var(--slate-600); margin-top: 1.35rem;
+}
+.prose p:first-child { margin-top: 0; }
+.prose strong { font-weight: 500; color: var(--ink-700); }
+
+.facts {
+  margin-top: clamp(2.25rem, 4vw, 3rem);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px; background: var(--line); border: 1px solid var(--line);
+  border-radius: 6px; overflow: hidden;
+}
+.fact { background: var(--paper); padding: 1.5rem 1.4rem; }
+.fact-n {
+  font-family: var(--serif); font-size: 2.05rem; font-weight: 400;
+  line-height: 1; color: var(--ink-700); letter-spacing: -.02em;
+}
+.fact-n em { font-style: italic; color: var(--teal-700); }
+.fact-l {
+  font-size: .74rem; font-weight: 400; line-height: 1.5;
+  color: var(--slate-500); margin-top: .55rem;
+}
+
+/* ══ SERVICES ═════════════════════════════════════════════════ */
+.services-head {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: clamp(1.5rem, 4vw, 4rem); align-items: end;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+}
+.service {
+  position: relative; background: var(--paper);
+  padding: clamp(1.75rem, 2.6vw, 2.4rem);
+  transition: background .3s var(--ease);
+}
+.service::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, var(--teal-600), var(--blue-600));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s var(--ease);
+}
+.service:hover { background: var(--paper-50); }
+.service:hover::after { transform: scaleX(1); }
+
+.service-top {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.service-icon {
+  width: 44px; height: 44px; border-radius: 5px;
+  display: grid; place-items: center;
+  background: var(--paper-100); color: var(--ink-700);
+  transition: background .3s var(--ease), color .3s var(--ease);
+}
+.service-icon svg { width: 21px; height: 21px; }
+.service:hover .service-icon { background: var(--ink-700); color: var(--teal-400); }
+.service-num {
+  font-family: var(--serif); font-size: .95rem; font-weight: 400;
+  color: var(--slate-500); letter-spacing: .05em;
+}
+.service h3 {
+  font-family: var(--serif); font-size: 1.24rem; font-weight: 500;
+  line-height: 1.32; color: var(--ink-700); margin-bottom: .8rem;
+  letter-spacing: -.008em;
+}
+.service p {
+  font-size: .885rem; font-weight: 300; line-height: 1.76; color: var(--slate-500);
+}
+
+/* ══ WHY / PILLARS ════════════════════════════════════════════ */
+.why { background: var(--ink-800); position: relative; overflow: hidden; isolation: isolate; }
+.why::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(70ch 50ch at 15% 0%, rgba(42,111,181,.20), transparent 62%),
+    radial-gradient(70ch 50ch at 88% 100%, rgba(16,156,156,.16), transparent 62%);
+}
+.pillars {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+.pillar {
+  position: relative; padding: clamp(1.75rem, 2.6vw, 2.25rem);
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+  transition: background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.pillar:hover {
+  background: rgba(255,255,255,.075);
+  border-color: rgba(63,189,189,.4);
+  transform: translateY(-3px);
+}
+.pillar-icon {
+  width: 46px; height: 46px; border-radius: 5px; margin-bottom: 1.4rem;
+  display: grid; place-items: center;
+  background: rgba(63,189,189,.13);
+  border: 1px solid rgba(63,189,189,.25);
+  color: var(--teal-400);
+}
+.pillar-icon svg { width: 22px; height: 22px; }
+.pillar h3 {
+  font-family: var(--serif); font-size: 1.2rem; font-weight: 500;
+  line-height: 1.35; color: #fff; margin-bottom: .75rem;
+}
+.pillar p { font-size: .875rem; font-weight: 300; line-height: 1.78; color: var(--slate-300); }
+
+/* ══ CONTACT ══════════════════════════════════════════════════ */
+.contact { background: var(--paper-50); border-top: 1px solid var(--line); }
+.contact-grid {
+  display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+  gap: clamp(2.5rem, 6vw, 5rem); align-items: start;
+}
+.contact-methods { display: grid; gap: 1.5rem; margin-top: 2.75rem; }
+.cm { display: flex; gap: 1.1rem; align-items: flex-start; }
+.cm-icon {
+  width: 40px; height: 40px; flex: none; border-radius: 5px;
+  display: grid; place-items: center;
+  background: var(--paper); border: 1px solid var(--line); color: var(--teal-700);
+}
+.cm-icon svg { width: 18px; height: 18px; }
+.cm-k {
+  font-size: .68rem; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--slate-500); margin-bottom: .2rem;
+}
+.cm-v { font-size: .95rem; color: var(--ink-700); line-height: 1.55; word-break: break-word; }
+.cm-v a { text-decoration: none; border-bottom: 1px solid var(--line); transition: border-color .2s var(--ease), color .2s var(--ease); }
+.cm-v a:hover { color: var(--teal-700); border-color: var(--teal-600); }
+
+.form-card {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 6px; padding: clamp(1.75rem, 3.2vw, 2.75rem);
+  box-shadow: var(--shadow-lg);
+}
+.form-card > h3 {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 500;
+  color: var(--ink-700); line-height: 1.3;
+}
+.form-card > .form-note {
+  font-size: .87rem; font-weight: 300; color: var(--slate-500);
+  margin-top: .5rem; margin-bottom: 2rem;
+}
+.field { margin-bottom: 1.25rem; }
+.field label {
+  display: block; font-size: .72rem; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--slate-500); margin-bottom: .5rem;
+}
+.field .req { color: var(--teal-700); }
+.field input, .field select, .field textarea {
+  width: 100%; font-family: var(--sans); font-size: .94rem; font-weight: 400;
+  color: var(--ink-700); background: var(--paper-50);
+  border: 1px solid var(--line); border-radius: 4px;
+  padding: .8rem .95rem; outline: none; -webkit-appearance: none; appearance: none;
+  transition: border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+}
+.field textarea { min-height: 128px; resize: vertical; line-height: 1.65; }
+.field select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%235B7186' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center;
+  padding-right: 2.5rem; cursor: pointer;
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--slate-500); font-weight: 300; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--slate-300); }
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--teal-600); background: var(--paper);
+  box-shadow: 0 0 0 3px rgba(16,156,156,.13); outline: none;
+}
+.field.has-error input, .field.has-error select, .field.has-error textarea {
+  border-color: #C0392B; box-shadow: 0 0 0 3px rgba(192,57,43,.1);
+}
+.field-error {
+  display: none; font-size: .78rem; color: #C0392B; margin-top: .4rem; font-weight: 400;
+}
+.field.has-error .field-error { display: block; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.field-row .field { margin-bottom: 1.25rem; }
+
+/* Honeypot */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-submit { width: 100%; margin-top: .5rem; padding-block: 1.05rem; }
+.form-submit[disabled] { opacity: .6; cursor: progress; }
+.form-status {
+  margin-top: 1rem; font-size: .86rem; line-height: 1.6;
+  padding: .85rem 1rem; border-radius: 4px; display: none;
+}
+.form-status.is-visible { display: block; }
+.form-status.is-ok { background: rgba(16,156,156,.09); color: var(--teal-700); border: 1px solid rgba(16,156,156,.28); }
+.form-status.is-err { background: rgba(192,57,43,.07); color: #A93226; border: 1px solid rgba(192,57,43,.25); }
+.form-legal { font-size: .76rem; font-weight: 300; color: var(--slate-500); margin-top: 1.1rem; line-height: 1.6; }
+
+/* ══ FOOTER ═══════════════════════════════════════════════════ */
+.site-footer { background: var(--ink-900); color: var(--slate-400); }
+.footer-top {
+  display: grid; grid-template-columns: minmax(0,1.35fr) repeat(2, minmax(0,1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+.footer-brand img { height: 62px; width: auto; }
+.footer-brand p {
+  font-size: .875rem; font-weight: 300; line-height: 1.8;
+  color: var(--slate-400); max-width: 38ch; margin-top: 1.5rem;
+}
+.footer-col h4 {
+  font-size: .68rem; font-weight: 600; letter-spacing: .15em;
+  text-transform: uppercase; color: #fff; margin-bottom: 1.15rem;
+}
+.footer-col ul { list-style: none; display: grid; gap: .7rem; }
+.footer-col a, .footer-col span {
+  font-size: .86rem; font-weight: 300; color: var(--slate-400);
+  text-decoration: none; transition: color .2s var(--ease); word-break: break-word;
+}
+.footer-col a:hover { color: var(--teal-400); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-block: 1.6rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: center; gap: .6rem 1.5rem;
+}
+.footer-bottom p { font-size: .78rem; font-weight: 300; color: var(--slate-400); }
+
+/* ══ MOTION ═══════════════════════════════════════════════════ */
+.reveal { opacity: 0; transform: translateY(20px); }
+.reveal.is-in {
+  opacity: 1; transform: none;
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important; scroll-behavior: auto !important;
   }
+  .reveal { opacity: 1; transform: none; }
+}
 
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--pure); color: var(--navy); line-height: 1.7; overflow-x: hidden; }
+/* ══ RESPONSIVE ═══════════════════════════════════════════════ */
+@media (max-width: 1080px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .pillars { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 0 4rem; height: 72px;
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(247,249,250,0.95); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(13,27,42,0.08);
-  }
-  .nav-logo { display: flex; align-items: center; text-decoration: none; }
-  .nav-logo img { height: 44px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); text-decoration: none; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; padding: 0.6rem 1.4rem; border: 1px solid var(--navy); transition: all 0.25s; }
-  .nav-cta:hover { background: var(--navy); color: var(--pure); }
+@media (max-width: 940px) {
+  :root { --header-h: 72px; }
+  .nav, .header-cta { display: none; }
+  .menu-toggle { display: flex; }
+  .brand img { height: 46px; }
+  .site-header.is-stuck .brand img { height: 40px; }
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh; background: var(--navy);
-    display: grid; grid-template-columns: 1fr 1fr;
-    position: relative; overflow: hidden;
-  }
-  .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 60%; height: 120%; background: linear-gradient(135deg, rgba(184,150,92,0.06) 0%, transparent 60%); pointer-events: none; }
-  .hero-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgba(184,150,92,0.2); }
-  .hero-left { padding: 10rem 5rem 6rem 6rem; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
-  .hero-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-  .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold); }
-  .hero-name { font-family: var(--serif); font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 300; color: var(--pure); line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-  .hero-name em { font-style: italic; color: var(--gold-light); }
-  .hero-credentials { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); margin-bottom: 2.5rem; }
-  .hero-tagline { font-size: 1.05rem; font-weight: 300; color: var(--mist); line-height: 1.8; max-width: 38ch; margin-bottom: 3.5rem; }
-  .hero-actions { display: flex; gap: 1.5rem; align-items: center; }
-  .btn-primary { display: inline-block; padding: 0.85rem 2.2rem; background: var(--gold); color: var(--navy); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: all 0.25s; }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-  .btn-ghost { display: inline-block; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); text-decoration: none; border-bottom: 1px solid rgba(200,216,224,0.3); padding-bottom: 2px; transition: all 0.25s; }
-  .btn-ghost:hover { color: var(--pure); border-color: var(--pure); }
-  .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding: 6rem 4rem; }
-  .hero-stats { display: flex; flex-direction: column; gap: 3rem; position: relative; z-index: 2; }
-  .stat-item { text-align: right; }
-  .stat-number { font-family: var(--serif); font-size: 3.5rem; font-weight: 300; color: var(--pure); line-height: 1; letter-spacing: -0.02em; }
-  .stat-number em { font-style: italic; color: var(--gold-light); }
-  .stat-label { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); margin-top: 0.4rem; }
-  .stat-divider { width: 2rem; height: 1px; background: rgba(184,150,92,0.3); margin-left: auto; margin-top: 1.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .dossier { max-width: 520px; }
+  .about-grid, .contact-grid, .services-head { grid-template-columns: 1fr; }
+  .about-aside { position: static; }
+  .profile-card { max-width: 520px; }
+  .services-head { gap: 1.25rem; align-items: start; }
+}
 
-  /* ── SECTION STRUCTURE ── */
-  section { position: relative; }
-  .section-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
-  .section-header { margin-bottom: 4rem; }
-  .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
-  .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
-  .section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--navy); line-height: 1.2; letter-spacing: -0.01em; }
-  .section-title em { font-style: italic; color: var(--steel); }
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .footer-top { grid-template-columns: 1fr; }
+  .credbar-inner { flex-direction: column; align-items: flex-start; gap: .9rem; }
+  .credbar-items { gap: .5rem 1.5rem; }
+  .hero-actions .btn { width: 100%; }
+  .footer-bottom { justify-content: flex-start; }
+}
 
-  /* ── ABOUT ── */
-  .about-section { background: var(--fog); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 6rem; align-items: start; }
-  .about-aside { position: sticky; top: 100px; }
-  .profile-block { background: var(--navy); padding: 2.5rem; position: relative; }
-  .profile-block::after { content: ''; position: absolute; bottom: -8px; right: -8px; left: 8px; top: 8px; border: 1px solid var(--gold); z-index: -1; }
-  .profile-name { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--pure); margin-bottom: 0.25rem; line-height: 1.2; }
-  .profile-cred { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 2rem; }
-  .profile-items { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
-  .profile-items li { font-size: 0.82rem; color: var(--mist); display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.5; }
-  .profile-items li::before { content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); margin-top: 0.55em; flex-shrink: 0; }
-  .contact-links { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(200,216,224,0.1); display: flex; flex-direction: column; gap: 0.6rem; }
-  .contact-links a { font-size: 0.78rem; color: var(--silver); text-decoration: none; transition: color 0.2s; letter-spacing: 0.02em; }
-  .contact-links a:hover { color: var(--gold-light); }
-  .about-body p { font-size: 1.02rem; font-weight: 300; color: var(--slate); line-height: 1.9; margin-bottom: 1.5rem; }
-  .about-body p strong { font-weight: 500; color: var(--navy); }
-  .about-body p:last-child { margin-bottom: 0; }
-
-  /* ── SERVICES ── */
-  .services-section { background: var(--pure); }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--mist); }
-  .service-card { padding: 2.5rem; border-right: 1px solid var(--mist); border-bottom: 1px solid var(--mist); position: relative; transition: background 0.3s; }
-  .service-card:hover { background: var(--fog); }
-  .service-card:nth-child(3n) { border-right: none; }
-  .service-card:nth-last-child(-n+3) { border-bottom: none; }
-  .service-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: var(--mist); line-height: 1; margin-bottom: 1.5rem; }
-  .service-title { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; color: var(--navy); margin-bottom: 1rem; line-height: 1.3; }
-  .service-desc { font-size: 0.88rem; font-weight: 300; color: var(--steel); line-height: 1.75; }
-  .service-accent { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.4s ease; }
-  .service-card:hover .service-accent { width: 100%; }
-
-  /* ── LEADERSHIP / TRUST ── */
-  .leadership-section { background: var(--navy); }
-  .leadership-section .section-title { color: var(--pure); }
-  .leadership-section .section-title em { color: var(--gold-light); }
-  .leadership-intro { font-size: 1rem; font-weight: 300; color: var(--silver); line-height: 1.85; max-width: 62ch; margin-bottom: 4rem; }
-  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.06); }
-  .trust-card { padding: 2.5rem; border-right: 1px solid rgba(255,255,255,0.06); position: relative; }
-  .trust-card:last-child { border-right: none; }
-  .trust-icon { font-size: 1.5rem; margin-bottom: 1.25rem; opacity: 0.8; }
-  .trust-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--pure); margin-bottom: 0.75rem; line-height: 1.3; }
-  .trust-desc { font-size: 0.84rem; font-weight: 300; color: var(--silver); line-height: 1.75; }
-  .trust-accent { position: absolute; top: 0; left: 0; width: 2px; height: 0; background: var(--gold); transition: height 0.5s ease; }
-  .trust-card:hover .trust-accent { height: 100%; }
-
-
-  /* ── CONTACT ── */
-  .contact-section { background: var(--pure); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-  .contact-left .section-header { margin-bottom: 2rem; }
-  .contact-intro { font-size: 1rem; font-weight: 300; color: var(--slate); line-height: 1.8; margin-bottom: 3rem; }
-  .contact-methods { display: flex; flex-direction: column; gap: 1.5rem; }
-  .contact-method { display: flex; gap: 1.5rem; align-items: flex-start; }
-  .method-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); min-width: 5rem; padding-top: 0.1rem; }
-  .method-value { font-size: 0.92rem; font-weight: 400; color: var(--navy); }
-  .method-value a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--mist); transition: border-color 0.2s, color 0.2s; }
-  .method-value a:hover { color: var(--gold); border-color: var(--gold); }
-  .contact-right { background: var(--navy); padding: 3rem; position: relative; }
-  .contact-right::after { content: ''; position: absolute; bottom: -8px; right: -8px; left: 8px; top: 8px; border: 1px solid var(--gold); z-index: -1; }
-  .form-field { margin-bottom: 1.5rem; }
-  .form-field label { display: block; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); margin-bottom: 0.5rem; }
-  .form-field input, .form-field textarea, .form-field select { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--pure); font-family: var(--sans); font-size: 0.9rem; font-weight: 300; padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-  .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--gold); }
-  .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(143,167,181,0.5); }
-  .form-field textarea { height: 110px; resize: none; }
-  .form-field select option { background: var(--navy); }
-  .form-submit { width: 100%; padding: 1rem; background: var(--gold); color: var(--navy); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.2s; }
-  .form-submit:hover { background: var(--gold-light); }
-
-  /* ── FOOTER ── */
-  footer { background: var(--navy-mid); padding: 2.5rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(184,150,92,0.15); }
-  .footer-logo { display: inline-flex; align-items: center; background: var(--fog); padding: 0.5rem 1rem; }
-  .footer-logo img { height: 26px; width: auto; display: block; }
-  .footer-copy { font-size: 0.74rem; font-weight: 300; color: var(--steel); letter-spacing: 0.05em; }
-
-  /* ── ANIMATIONS ── */
-  .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fade-up.visible { opacity: 1; transform: none; }
-  .fade-up:nth-child(2) { transition-delay: 0.1s; }
-  .fade-up:nth-child(3) { transition-delay: 0.2s; }
-  .fade-up:nth-child(4) { transition-delay: 0.3s; }
-  .fade-up:nth-child(5) { transition-delay: 0.4s; }
-  .fade-up:nth-child(6) { transition-delay: 0.5s; }
-
-  /* ── MOBILE ── */
-  @media (max-width: 900px) {
-    nav { padding: 0 1.25rem; height: 60px; }
-    .nav-links { display: none; }
-    .nav-cta { padding: 0.5rem 1rem; font-size: 0.72rem; }
-    .nav-logo img { height: 30px; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-right { display: none; }
-    .hero-line { display: none; }
-    .hero-left { padding: 7rem 1.5rem 4rem; }
-    .hero-name { font-size: 2.6rem; }
-    .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .section-inner { padding: 3.5rem 1.5rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .about-aside { position: static; }
-    .profile-block::after { display: none; }
-    .services-grid { grid-template-columns: 1fr; }
-    .service-card { border-right: none !important; }
-    .service-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--mist); }
-    .service-card:last-child { border-bottom: none; }
-    .trust-grid { grid-template-columns: 1fr; }
-    .trust-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .trust-card:last-child { border-bottom: none; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .contact-right::after { display: none; }
-    footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 2rem 1.5rem; }
-  }
+/* ══ PRINT ════════════════════════════════════════════════════ */
+@media print {
+  .site-header, .mobile-nav, .menu-toggle, .hero-actions, .form-card, .credbar { display: none !important; }
+  body { color: #000; background: #fff; font-size: 11pt; }
+  .hero, .why, .site-footer { background: #fff !important; color: #000 !important; }
+  .hero::before, .hero::after, .why::before { display: none !important; }
+  .hero h1, .pillar h3, .on-dark .h-display { color: #000 !important; }
+  .hero-tagline, .pillar p, .lede, .footer-brand p { color: #333 !important; }
+  .dossier, .pillar { border: 1px solid #999; box-shadow: none; }
+  .dossier-v, .dossier-k { color: #000 !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  section { break-inside: avoid; }
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <img src="telet-logo-transparent.png" alt="TeleT LLC">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Work With Us</a>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="TeleT LLC — home">
+      <img src="assets/telet-logo.png" width="1136" height="378" alt="TeleT LLC" fetchpriority="high">
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why TeleT</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-line header-cta">Start a Conversation</a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#why">Why TeleT</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-solid">Start a Conversation</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-line"></div>
-  <div class="hero-left">
-    <div class="hero-eyebrow">Clinical Research & Regulatory Affairs</div>
-    <h1 class="hero-name">Tabinda <em>Ali</em></h1>
-    <p class="hero-credentials">MBBS · MS · CCRC</p>
-    <p class="hero-tagline">Founder of TeleT LLC — bringing rigorous clinical research expertise, regulatory strategy, and over a decade of medical science to your trials and submissions.</p>
-    <div class="hero-actions">
-      <a href="#services" class="btn-primary">Our Services</a>
-      <a href="#about" class="btn-ghost">About TeleT</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number"><em>10+</em></div>
-        <div class="stat-label">Years of Clinical Research</div>
-        <div class="stat-divider"></div>
+<main id="main">
+<span id="top"></span>
+
+<!-- ═══ HERO ═════════════════════════════════════════════════ -->
+<section class="hero on-dark" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Clinical Research &amp; Regulatory Affairs</p>
+        <h1 id="hero-title">Tabinda <em>Ali</em></h1>
+        <p class="hero-cred">
+          <span>MBBS</span><span>MS</span><span>CCRC</span>
+        </p>
+        <p class="hero-tagline">
+          Founder of TeleT LLC — bringing rigorous clinical research expertise,
+          regulatory strategy, and over a decade of medical science to your
+          trials and submissions.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-solid">
+            Start a Conversation
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+          </a>
+          <a href="#services" class="btn btn-line">Explore Services</a>
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number"><em>4.0</em></div>
-        <div class="stat-label">GPA · Master of Clinical Research</div>
-        <div class="stat-divider"></div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number"><em>CCRC</em></div>
-        <div class="stat-label">Certified Clinical Research Coordinator</div>
-      </div>
+
+      <aside class="dossier" aria-label="Credentials">
+        <img class="dossier-logo" src="assets/telet-logo-reverse.png" width="1136" height="378" alt="TeleT LLC">
+        <div class="dossier-rule"></div>
+        <ul class="dossier-list">
+          <li>
+            <span class="dossier-k">Experience</span>
+            <span class="dossier-v">10+ years in clinical research
+              <small>Academic and ambulatory settings</small></span>
+          </li>
+          <li>
+            <span class="dossier-k">Education</span>
+            <span class="dossier-v">MS, Clinical Research — 4.0 GPA
+              <small>The Ohio State University</small></span>
+          </li>
+          <li>
+            <span class="dossier-k">Certification</span>
+            <span class="dossier-v">CCRC
+              <small>Certified Clinical Research Coordinator</small></span>
+          </li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-aside">
-        <div class="profile-block fade-up">
+<!-- ═══ CREDENTIAL BAR ═══════════════════════════════════════ -->
+<div class="credbar">
+  <div class="wrap credbar-inner">
+    <p class="credbar-label">Trained &amp; practising at</p>
+    <ul class="credbar-items">
+      <li>Michigan Medicine, University of Michigan</li>
+      <li>The Ohio State University</li>
+      <li>Baqai Medical University</li>
+      <li>StratPhD</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ════════════════════════════════════════════════ -->
+<section class="section about" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+
+    <div class="about-aside">
+      <div class="profile-card reveal">
+        <div class="profile-head">
           <p class="profile-name">Tabinda Ali</p>
-          <p class="profile-cred">MBBS · MS · CCRC</p>
-          <ul class="profile-items">
-            <li>Founder — TeleT LLC</li>
-            <li>Portfolio Manager — Michigan Medicine, University of Michigan</li>
-            <li>Medical Writer — StratPhD</li>
+          <p class="profile-suffix">MBBS · MS · CCRC</p>
+        </div>
+        <div class="profile-body">
+          <p class="profile-h">Current Roles</p>
+          <ul class="profile-roles">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5 3 6v4.5c0 4 2.9 6.4 7 7.5 4.1-1.1 7-3.5 7-7.5V6l-7-3.5Z"/><path d="m7.4 9.9 1.9 1.9 3.4-3.6"/></svg>
+              <div><strong>Founder &amp; Principal Consultant</strong><span>TeleT LLC</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17.5h15M4 17.5V8l6-4.5L16 8v9.5"/><path d="M8.25 17.5v-4h3.5v4"/></svg>
+              <div><strong>Portfolio Manager</strong><span>Michigan Medicine, University of Michigan</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.2 3.3a1.7 1.7 0 0 1 2.5 2.5L7.9 14.6l-3.4.9.9-3.4 8.8-8.8Z"/></svg>
+              <div><strong>Medical Writer</strong><span>StratPhD</span></div>
+            </li>
           </ul>
-          <div class="contact-links">
-            <a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a>
-            <a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">linkedin.com/in/tabinda-ali87110412</a>
+
+          <div class="profile-contact">
+            <a href="mailto:alitabinda2026@gmail.com">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.5"/><path d="m3 5.5 7 5 7-5"/></svg>
+              alitabinda2026@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M4.6 6.6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2ZM3.3 8h2.6v8.6H3.3V8Zm5 0h2.5v1.2a2.8 2.8 0 0 1 2.5-1.35c2 0 3.05 1.25 3.05 3.6v5.15h-2.6v-4.6c0-1.2-.45-1.85-1.4-1.85-.9 0-1.5.6-1.5 1.85v4.6H8.3V8Z"/></svg>
+              LinkedIn Profile
+            </a>
+            <a href="#contact">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17.5s5.8-4.4 5.8-9a5.8 5.8 0 1 0-11.6 0c0 4.6 5.8 9 5.8 9Z"/><circle cx="10" cy="8.5" r="2.1"/></svg>
+              Northville, Michigan
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="about-body">
-        <div class="section-header fade-up">
-          <p class="section-label">About TeleT LLC</p>
-          <h2 class="section-title">Clinical expertise.<br><em>Regulatory precision.</em></h2>
+    <div>
+      <div class="reveal">
+        <p class="eyebrow">About TeleT LLC</p>
+        <h2 class="h-display" id="about-title">Clinical expertise.<br><em>Regulatory precision.</em></h2>
+      </div>
+
+      <div class="prose reveal" style="--d:80ms; margin-top:2rem;">
+        <p>TeleT LLC is a clinical research and regulatory affairs consultancy founded by <strong>Tabinda Ali, MBBS, MS, CCRC</strong> — a physician-scientist with dual academic specialization in Clinical Research Management and Regulatory Affairs, and years of hands-on experience at one of the nation's leading academic medical centers.</p>
+        <p>With a medical degree from Baqai Medical University and a Master of Clinical Research (4.0 GPA) from The Ohio State University, Tabinda brings an unusual combination of clinical fluency and regulatory rigor. Her career spans clinical trial management, IRB compliance, quality assurance, data coordination, and regulatory strategy across both academic and ambulatory settings.</p>
+        <p>TeleT LLC provides institutional-grade expertise to sponsors, sites, and organizations that need a trusted partner for clinical research operations and regulatory consulting.</p>
+      </div>
+
+      <div class="facts reveal" style="--d:160ms;">
+        <div class="fact">
+          <p class="fact-n"><em>10+</em></p>
+          <p class="fact-l">Years across clinical trial management, compliance, and regulatory strategy</p>
         </div>
-        <div class="fade-up">
-          <p>TeleT LLC is a clinical research and regulatory affairs consultancy founded by <strong>Tabinda Ali, MBBS, MS, CCRC</strong> — a physician-scientist with dual academic specialization in Clinical Research Management and Regulatory Affairs, and years of hands-on experience at one of the nation's leading academic medical centers.</p>
-          <p>With a medical degree from Baqai Medical University and a Master of Clinical Research (4.0 GPA) from The Ohio State University, Tabinda brings an unusual combination of clinical fluency and regulatory rigor. Her career spans clinical trial management, IRB compliance, quality assurance, data coordination, and regulatory strategy across both academic and ambulatory settings.</p>
-          <p>TeleT LLC provides institutional-grade expertise to sponsors, sites, and organizations that need a trusted partner for clinical research operations and regulatory consulting.</p>
+        <div class="fact">
+          <p class="fact-n"><em>4.0</em></p>
+          <p class="fact-l">GPA — Master of Clinical Research, The Ohio State University</p>
+        </div>
+        <div class="fact">
+          <p class="fact-n"><em>MBBS</em></p>
+          <p class="fact-l">Medical degree, Baqai Medical University — clinical fluency at the source</p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services-section" id="services">
-  <div class="section-inner">
-    <div class="section-header fade-up">
-      <p class="section-label">What We Offer</p>
-      <h2 class="section-title">Services & <em>Capabilities</em></h2>
+<!-- ═══ SERVICES ═════════════════════════════════════════════ -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="services-head">
+      <div class="reveal">
+        <p class="eyebrow">What We Offer</p>
+        <h2 class="h-display" id="services-title">Services &amp; <em>capabilities</em></h2>
+      </div>
+      <p class="lede reveal" style="--d:80ms; margin-top:0;">
+        End-to-end support across the research lifecycle — from first regulatory
+        strategy session through submission, monitoring, and closeout.
+      </p>
     </div>
+
     <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="service-num">01</div>
-        <h3 class="service-title">Regulatory Affairs Consulting</h3>
-        <p class="service-desc">FDA submission strategy, IND applications, regulatory document management, life cycle planning, and compliance with federal guidance for drugs, biologics, and devices.</p>
-        <div class="service-accent"></div>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-num">02</div>
-        <h3 class="service-title">Clinical Trial Operations</h3>
-        <p class="service-desc">Site activation, IRB submissions, protocol development, feasibility assessments, enrollment strategy, and full study lifecycle management from start-up through closeout.</p>
-        <div class="service-accent"></div>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-num">03</div>
-        <h3 class="service-title">IRB & Compliance</h3>
-        <p class="service-desc">Preparation and submission of electronic IRB applications, protocol amendments, SAE reports, DSMB submissions, renewal documentation, and informed consent development.</p>
-        <div class="service-accent"></div>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-num">04</div>
-        <h3 class="service-title">Quality & Auditing</h3>
-        <p class="service-desc">Risk-based monitoring, GCP compliance audits, SOP development, QAPI planning, corrective action plans, and preparation for regulatory surveys and state licensure.</p>
-        <div class="service-accent"></div>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-num">05</div>
-        <h3 class="service-title">Data Management</h3>
-        <p class="service-desc">EDC setup and oversight using DataTrak and related systems, data quality assurance, source data management, CRF review, adverse event reporting, and data management plan development.</p>
-        <div class="service-accent"></div>
-      </div>
-      <div class="service-card fade-up">
-        <div class="service-num">06</div>
-        <h3 class="service-title">Medical Writing</h3>
-        <p class="service-desc">Protocol development, informed consent documents, clinical study reports, regulatory briefing documents, and scientific content for research and submission purposes.</p>
-        <div class="service-accent"></div>
-      </div>
+
+      <article class="service reveal">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H6.5A1.5 1.5 0 0 0 5 4v16a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 20V7.5L14 2.5Z"/><path d="M14 2.5V7a.5.5 0 0 0 .5.5H19"/><path d="m8.75 15.25 1.9 1.9 3.6-3.9"/></svg>
+          </div>
+          <span class="service-num">01</span>
+        </div>
+        <h3>Regulatory Affairs Consulting</h3>
+        <p>FDA submission strategy, IND applications, regulatory document management, life cycle planning, and compliance with federal guidance for drugs, biologics, and devices.</p>
+      </article>
+
+      <article class="service reveal" style="--d:60ms;">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2.5h5"/><path d="M10.5 2.5v6.2L5.6 17.6a2 2 0 0 0 1.75 3h9.3a2 2 0 0 0 1.75-3L13.5 8.7V2.5"/><path d="M8 14.5h8"/></svg>
+          </div>
+          <span class="service-num">02</span>
+        </div>
+        <h3>Clinical Trial Operations</h3>
+        <p>Site activation, IRB submissions, protocol development, feasibility assessments, enrollment strategy, and full study lifecycle management from start-up through closeout.</p>
+      </article>
+
+      <article class="service reveal" style="--d:120ms;">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.75 4.5 6.1v5.4c0 4.8 3.15 7.75 7.5 9.05 4.35-1.3 7.5-4.25 7.5-9.05V6.1L12 2.75Z"/><path d="m9 11.9 2.15 2.15L15.2 9.9"/></svg>
+          </div>
+          <span class="service-num">03</span>
+        </div>
+        <h3>IRB &amp; Compliance</h3>
+        <p>Preparation and submission of electronic IRB applications, protocol amendments, SAE reports, DSMB submissions, renewal documentation, and informed consent development.</p>
+      </article>
+
+      <article class="service reveal">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.75"/><path d="m15.4 15.4 4.6 4.6"/><path d="M8 11.2v2.05M10.5 8.4v4.85M13 10.1v3.15"/></svg>
+          </div>
+          <span class="service-num">04</span>
+        </div>
+        <h3>Quality &amp; Auditing</h3>
+        <p>Risk-based monitoring, GCP compliance audits, SOP development, QAPI planning, corrective action plans, and preparation for regulatory surveys and state licensure.</p>
+      </article>
+
+      <article class="service reveal" style="--d:60ms;">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.75" rx="7.25" ry="3"/><path d="M4.75 5.75v12.5c0 1.65 3.25 3 7.25 3s7.25-1.35 7.25-3V5.75"/><path d="M19.25 12c0 1.65-3.25 3-7.25 3s-7.25-1.35-7.25-3"/></svg>
+          </div>
+          <span class="service-num">05</span>
+        </div>
+        <h3>Data Management</h3>
+        <p>EDC setup and oversight using DataTrak and related systems, data quality assurance, source data management, CRF review, adverse event reporting, and data management plan development.</p>
+      </article>
+
+      <article class="service reveal" style="--d:120ms;">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.9 3.6a2.05 2.05 0 0 1 2.9 2.9L9.15 17.15l-3.9 1 1-3.9L16.9 3.6Z"/><path d="M4 21h16"/></svg>
+          </div>
+          <span class="service-num">06</span>
+        </div>
+        <h3>Medical Writing</h3>
+        <p>Protocol development, informed consent documents, clinical study reports, regulatory briefing documents, and scientific content for research and submission purposes.</p>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- LEADERSHIP & TRUST -->
-<section class="leadership-section" id="leadership">
-  <div class="section-inner">
-    <div class="section-header fade-up">
-      <p class="section-label" style="color:var(--gold);">Why TeleT</p>
-      <h2 class="section-title">Leadership you can <em>trust</em></h2>
+<!-- ═══ WHY TELET ════════════════════════════════════════════ -->
+<section class="section why on-dark" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Why TeleT</p>
+      <h2 class="h-display" id="why-title">Leadership you can <em>trust</em></h2>
+      <p class="lede">
+        TeleT LLC is built on a foundation of academic rigor, institutional
+        experience, and a personal commitment to the integrity of every
+        engagement. Every project is led directly by Tabinda — no handoffs,
+        no junior staff, no shortcuts.
+      </p>
     </div>
-    <p class="leadership-intro fade-up">TeleT LLC is built on a foundation of academic rigor, institutional experience, and a personal commitment to the integrity of every engagement. Every project is led directly by Tabinda — no handoffs, no junior staff, no shortcuts.</p>
-    <div class="trust-grid fade-up">
-      <div class="trust-card">
-        <div class="trust-accent"></div>
-        <div class="trust-icon">⚕</div>
-        <h3 class="trust-title">Physician-Scientist Foundation</h3>
-        <p class="trust-desc">MBBS from Baqai Medical University combined with a 4.0 GPA Master of Clinical Research from Ohio State — rare dual expertise spanning bedside medicine and research operations.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-accent"></div>
-        <div class="trust-icon">🏛</div>
-        <h3 class="trust-title">Institutional-Grade Experience</h3>
-        <p class="trust-desc">Years at Michigan Medicine's Clinical Trial Support Office managing multi-sponsor clinical trials, regulatory submissions, IRB compliance, and study lifecycle from activation through closeout.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-accent"></div>
-        <div class="trust-icon">✦</div>
-        <h3 class="trust-title">Founder-Led, Every Time</h3>
-        <p class="trust-desc">Every engagement is handled personally by Tabinda — direct communication, full accountability, and the discretion and rigor your regulatory and clinical work demands.</p>
-      </div>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v5.5a4.25 4.25 0 0 0 8.5 0V3"/><path d="M4.25 3H6M12.75 3h1.75"/><path d="M10.25 12.75v2.5a4.25 4.25 0 0 0 8.5 0v-1.4"/><circle cx="18.75" cy="12.1" r="1.85"/></svg>
+        </div>
+        <h3>Physician-Scientist Foundation</h3>
+        <p>MBBS from Baqai Medical University combined with a 4.0 GPA Master of Clinical Research from Ohio State — rare dual expertise spanning bedside medicine and research operations.</p>
+      </article>
+
+      <article class="pillar reveal" style="--d:80ms;">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.75 21h18.5"/><path d="M4.5 21V9.5L12 4l7.5 5.5V21"/><path d="M9.75 21v-5.25h4.5V21"/><path d="M9.75 11.25h4.5"/></svg>
+        </div>
+        <h3>Institutional-Grade Experience</h3>
+        <p>Years at Michigan Medicine's Clinical Trial Support Office managing multi-sponsor clinical trials, regulatory submissions, IRB compliance, and study lifecycle from activation through closeout.</p>
+      </article>
+
+      <article class="pillar reveal" style="--d:160ms;">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.75"/><path d="M4.75 20.25a7.25 7.25 0 0 1 14.5 0"/><path d="M12 8h.01"/></svg>
+        </div>
+        <h3>Founder-Led, Every Time</h3>
+        <p>Every engagement is handled personally by Tabinda — direct communication, full accountability, and the discretion and rigor your regulatory and clinical work demands.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <div class="section-header fade-up">
-          <p class="section-label">Get in Touch</p>
-          <h2 class="section-title">Let's work <em>together</em></h2>
-        </div>
-        <p class="contact-intro fade-up">Whether you need a regulatory affairs consultant, clinical trial support, or a medical writing partner — TeleT LLC brings physician-scientist expertise to your project.</p>
-        <div class="contact-methods fade-up">
-          <div class="contact-method">
-            <span class="method-label">Email</span>
-            <span class="method-value"><a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a></span>
+<!-- ═══ CONTACT ══════════════════════════════════════════════ -->
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+
+    <div>
+      <div class="reveal">
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="h-display" id="contact-title">Let's work <em>together</em></h2>
+        <p class="lede">
+          Whether you need a regulatory affairs consultant, clinical trial
+          support, or a medical writing partner — TeleT LLC brings
+          physician-scientist expertise to your project.
+        </p>
+      </div>
+
+      <div class="contact-methods reveal" style="--d:80ms;">
+        <div class="cm">
+          <div class="cm-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.5"/><path d="m3 5.5 7 5 7-5"/></svg>
           </div>
-          <div class="contact-method">
-            <span class="method-label">LinkedIn</span>
-            <span class="method-value"><a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank">tabinda-ali87110412</a></span>
+          <div>
+            <p class="cm-k">Email</p>
+            <p class="cm-v"><a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="cm">
+          <div class="cm-icon">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M4.6 6.6a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2ZM3.3 8h2.6v8.6H3.3V8Zm5 0h2.5v1.2a2.8 2.8 0 0 1 2.5-1.35c2 0 3.05 1.25 3.05 3.6v5.15h-2.6v-4.6c0-1.2-.45-1.85-1.4-1.85-.9 0-1.5.6-1.5 1.85v4.6H8.3V8Z"/></svg>
+          </div>
+          <div>
+            <p class="cm-k">LinkedIn</p>
+            <p class="cm-v"><a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank" rel="noopener noreferrer">tabinda-ali87110412</a></p>
+          </div>
+        </div>
+
+        <div class="cm">
+          <div class="cm-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17.5s5.8-4.4 5.8-9a5.8 5.8 0 1 0-11.6 0c0 4.6 5.8 9 5.8 9Z"/><circle cx="10" cy="8.5" r="2.1"/></svg>
+          </div>
+          <div>
+            <p class="cm-k">Location</p>
+            <p class="cm-v">Northville, Michigan — serving clients nationwide</p>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="contact-right fade-up">
-        <div class="form-field">
-          <label>Your Name</label>
-          <input type="text" placeholder="Full name">
+    <div class="form-card reveal" style="--d:120ms;">
+      <h3>Send an inquiry</h3>
+      <p class="form-note">Tell us a little about your project and we'll respond personally.</p>
+
+      <form id="inquiryForm" novalidate>
+        <div class="field-row">
+          <div class="field" id="f-name">
+            <label for="in-name">Your Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="in-name" name="name" autocomplete="name"
+                   placeholder="Full name" required
+                   aria-describedby="e-name">
+            <p class="field-error" id="e-name">Please enter your name.</p>
+          </div>
+
+          <div class="field" id="f-email">
+            <label for="in-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="in-email" name="email" autocomplete="email"
+                   placeholder="you@organization.com" required
+                   aria-describedby="e-email">
+            <p class="field-error" id="e-email">Please enter a valid email address.</p>
+          </div>
         </div>
-        <div class="form-field">
-          <label>Email Address</label>
-          <input type="email" placeholder="your@email.com">
+
+        <div class="field" id="f-org">
+          <label for="in-org">Organization</label>
+          <input type="text" id="in-org" name="organization" autocomplete="organization"
+                 placeholder="Company, site, or institution">
         </div>
-        <div class="form-field">
-          <label>Inquiry Type</label>
-          <select>
+
+        <div class="field" id="f-topic">
+          <label for="in-topic">Inquiry Type <span class="req" aria-hidden="true">*</span></label>
+          <select id="in-topic" name="topic" required aria-describedby="e-topic">
             <option value="">Select a service area</option>
             <option>Regulatory Affairs Consulting</option>
             <option>Clinical Trial Operations</option>
-            <option>IRB & Compliance</option>
-            <option>Quality Assurance & Auditing</option>
+            <option>IRB &amp; Compliance</option>
+            <option>Quality Assurance &amp; Auditing</option>
             <option>Data Management</option>
             <option>Medical Writing</option>
             <option>General Inquiry</option>
           </select>
+          <p class="field-error" id="e-topic">Please select an inquiry type.</p>
         </div>
-        <div class="form-field">
-          <label>Message</label>
-          <textarea placeholder="Briefly describe your project or question..."></textarea>
+
+        <div class="field" id="f-msg">
+          <label for="in-msg">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="in-msg" name="message" required
+                    placeholder="Briefly describe your project, timeline, or question…"
+                    aria-describedby="e-msg"></textarea>
+          <p class="field-error" id="e-msg">Please include a short message.</p>
         </div>
-        <button class="form-submit">Send Message</button>
-      </div>
+
+        <!-- Spam trap: hidden from people, tempting to bots -->
+        <div class="hp" aria-hidden="true">
+          <label for="in-company-url">Leave this field empty</label>
+          <input type="text" id="in-company-url" name="_company_url" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-solid form-submit" id="submitBtn">Send Inquiry</button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+        <p class="form-legal">
+          Please don't include protected health information (PHI), patient
+          identifiers, or confidential study data in this form.
+        </p>
+      </form>
     </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <a href="#" class="footer-logo"><img src="telet-logo-transparent.png" alt="TeleT LLC"></a>
-  <span class="footer-copy">© 2025 TeleT LLC · Clinical Research & Regulatory Affairs · Northville, Michigan</span>
+</main>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/telet-logo-reverse.png" width="1136" height="378" alt="TeleT LLC" loading="lazy">
+        <p>Clinical research and regulatory affairs consulting — led personally by Tabinda Ali, MBBS, MS, CCRC.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why TeleT</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:alitabinda2026@gmail.com">alitabinda2026@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/tabinda-ali87110412" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><span>Northville, Michigan</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> TeleT LLC. All rights reserved.</p>
+      <p>Clinical Research &amp; Regulatory Affairs · Northville, Michigan</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+(function () {
+  'use strict';
 
-document.querySelector('.form-submit').addEventListener('click', function() {
-  const name = document.querySelector('input[type=text]').value;
-  const email = document.querySelector('input[type=email]').value;
-  if (!name || !email) {
-    this.textContent = 'Please fill in name & email';
-    setTimeout(() => this.textContent = 'Send Message', 2000);
-    return;
+  /* ────────────────────────────────────────────────────────────
+     FORM DELIVERY
+     Leave FORM_ENDPOINT empty and the form opens the visitor's
+     email client with everything pre-filled (works with no backend).
+     To collect submissions server-side instead, paste a POST
+     endpoint here — e.g. a Formspree/Basin/Netlify Forms URL:
+        var FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxxx';
+     ──────────────────────────────────────────────────────────── */
+  var FORM_ENDPOINT = '';
+  var CONTACT_EMAIL = 'alitabinda2026@gmail.com';
+
+  var $  = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ── Year ── */
+  var yearEl = $('#year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── Sticky header ── */
+  var header = $('#header');
+  var onScroll = function () {
+    header.classList.toggle('is-stuck', window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── Mobile menu ── */
+  var toggle = $('#menuToggle');
+  var mobileNav = $('#mobileNav');
+
+  function setMenu(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mobileNav.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
   }
-  this.textContent = 'Message Sent ✓';
-  this.style.background = '#4A6274';
-  this.style.cursor = 'default';
-});
+  toggle.addEventListener('click', function () {
+    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  $$('a', mobileNav).forEach(function (a) {
+    a.addEventListener('click', function () { setMenu(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 940) setMenu(false);
+  });
+
+  /* ── Scroll reveal ── */
+  var reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  /* ── Scroll-spy nav ── */
+  var sections = ['about', 'services', 'why', 'contact']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  var navLinks = $$('.nav a');
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          var match = link.getAttribute('href') === '#' + entry.target.id;
+          if (match) { link.setAttribute('aria-current', 'true'); }
+          else { link.removeAttribute('aria-current'); }
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ── Contact form ── */
+  var form = $('#inquiryForm');
+  var status = $('#formStatus');
+  var submitBtn = $('#submitBtn');
+
+  var RULES = [
+    { field: 'f-name',  input: 'in-name',  test: function (v) { return v.trim().length > 1; } },
+    { field: 'f-email', input: 'in-email', test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); } },
+    { field: 'f-topic', input: 'in-topic', test: function (v) { return v !== ''; } },
+    { field: 'f-msg',   input: 'in-msg',   test: function (v) { return v.trim().length > 4; } }
+  ];
+
+  function showStatus(message, kind) {
+    status.textContent = message;
+    status.className = 'form-status is-visible ' + (kind === 'ok' ? 'is-ok' : 'is-err');
+  }
+
+  function validate() {
+    var firstBad = null;
+    RULES.forEach(function (rule) {
+      var wrap = document.getElementById(rule.field);
+      var input = document.getElementById(rule.input);
+      var ok = rule.test(input.value);
+      wrap.classList.toggle('has-error', !ok);
+      input.setAttribute('aria-invalid', String(!ok));
+      if (!ok && !firstBad) firstBad = input;
+    });
+    return firstBad;
+  }
+
+  // Clear a field's error as soon as it becomes valid.
+  RULES.forEach(function (rule) {
+    var input = document.getElementById(rule.input);
+    var clear = function () {
+      if (rule.test(input.value)) {
+        document.getElementById(rule.field).classList.remove('has-error');
+        input.setAttribute('aria-invalid', 'false');
+      }
+    };
+    input.addEventListener('input', clear);
+    input.addEventListener('change', clear);
+  });
+
+  function buildMailto(data) {
+    var body = [
+      'Name: ' + data.name,
+      'Email: ' + data.email,
+      'Organization: ' + (data.organization || '—'),
+      'Inquiry type: ' + data.topic,
+      '',
+      data.message
+    ].join('\n');
+    return 'mailto:' + CONTACT_EMAIL +
+           '?subject=' + encodeURIComponent('TeleT inquiry — ' + data.topic) +
+           '&body=' + encodeURIComponent(body);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Honeypot: a bot filled the hidden field — pretend success, send nothing.
+    if ($('#in-company-url').value !== '') {
+      showStatus('Thank you — your message has been sent.', 'ok');
+      return;
+    }
+
+    var firstBad = validate();
+    if (firstBad) {
+      showStatus('Please correct the highlighted fields and try again.', 'err');
+      firstBad.focus();
+      return;
+    }
+
+    var data = {
+      name: $('#in-name').value.trim(),
+      email: $('#in-email').value.trim(),
+      organization: $('#in-org').value.trim(),
+      topic: $('#in-topic').value,
+      message: $('#in-msg').value.trim()
+    };
+
+    if (!FORM_ENDPOINT) {
+      window.location.href = buildMailto(data);
+      showStatus('Your email app is opening with this inquiry ready to send. ' +
+                 'If nothing happens, email ' + CONTACT_EMAIL + ' directly.', 'ok');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Request failed with status ' + res.status);
+        form.reset();
+        showStatus('Thank you — your inquiry has been sent. You will receive a reply shortly.', 'ok');
+      })
+      .catch(function () {
+        showStatus('Something went wrong sending your message. Please email ' +
+                   CONTACT_EMAIL + ' directly.', 'err');
+      })
+      .then(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Inquiry';
+      });
+  });
+})();
 </script>
 
 </body>
