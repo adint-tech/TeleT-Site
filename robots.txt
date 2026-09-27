@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace with the live domain before launch.
 Sitemap: https://teletllc.com/sitemap.xml
